@@ -25,7 +25,6 @@ const API_SITES = {
     dyttzy: {
         api: 'http://caiji.dyttzyapi.com/api.php/provide/vod/?ac=list&wd=',
         name: '电影天堂资源',
-        detail: 'http://caiji.dyttzyapi.com/api.php/provide/vod/?ac=detail', 
     },
     ruyi: {
         api: 'https://cj.rycjapi.com/api.php/provide/vod',
@@ -46,7 +45,7 @@ const API_SITES = {
     ffzy: {
         api: 'http://ffzy5.tv/api.php/provide/vod',
         name: '非凡影视',
-        detail: 'http://ffzy5.tv/api.php/provide/vod/?ac=detail', 
+        detail: 'http://api.ffzyapi.com/api.php/provide/vod/?ac=detail', 
     },
     heimuer: {
         api: 'https://json.heimuer.xyz/api.php/provide/vod',
@@ -156,8 +155,7 @@ const API_SITES = {
     huangcang: {
         api: 'https://hsckzy.vip/api.php/provide/vod',
         name: '黄色仓库',
-        adult: true,
-        detail: 'https://hsckzy.vip'
+        adult: true
     },
     yutu: {
         api: 'https://apiyutu.com/api.php/provide/vod',
@@ -193,8 +191,8 @@ const AGGREGATED_SEARCH_CONFIG = {
 const API_CONFIG = {
     search: {
         // 只拼接参数部分，不再包含 /api.php/provide/vod/
-        path: '?ac=videolist&wd=',
-        pagePath: '?ac=videolist&wd={query}&pg={page}',
+        path: '?ac=list&wd=',
+        pagePath: '?ac=list&wd={query}&pg={page}',
         maxPages: 50, // 最大获取页数
         headers: {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
@@ -203,7 +201,7 @@ const API_CONFIG = {
     },
     detail: {
         // 只拼接参数部分
-        path: '?ac=videolist&ids=',
+        path: '?ac=list&ids=',
         headers: {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
             'Accept': 'application/json'

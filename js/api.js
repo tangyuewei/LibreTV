@@ -98,7 +98,8 @@ async function handleApiRequest(url) {
             // 如果是自定义API，并且传递了detail参数，尝试特殊处理
             // 优先 customDetail
             if (sourceCode === 'custom' && customDetail) {
-                return await handleCustomApiSpecialDetail(id, customDetail);
+                //return await handleCustomApiSpecialDetail(id, customDetail);
+                return await handleCustomApiSpecialDetail(id, customApi);
             }
             if (sourceCode === 'custom' && url.searchParams.get('useDetail') === 'true') {
                 return await handleCustomApiSpecialDetail(id, customApi);

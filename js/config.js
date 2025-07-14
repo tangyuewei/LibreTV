@@ -45,10 +45,12 @@ const API_SITES = {
     ffzy: {
         api: 'https://api.ffzyapi.com/api.php/provide/vod',
         name: '非凡影视',
+        detail: 'https://ffzy.tv', 
     },
     heimuer: {
         api: 'https://json.heimuer.xyz/api.php/provide/vod',
         name: '黑木耳',
+        detail: 'https://heimuer.tv', 
     },
     zy360: {
         api: 'https://360zy.com/api.php/provide/vod',
@@ -69,7 +71,7 @@ const API_SITES = {
     jisu: {
         api: 'https://jszyapi.com/api.php/provide/vod',
         name: '极速资源',
-        detail: 'https://jszyapi.com/api.php/provide/vod/?ac=detail', 
+        detail: 'https://jszyapi.com', 
     },
     dbzy: {
         api: 'https://dbzy.tv/api.php/provide/vod',

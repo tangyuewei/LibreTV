@@ -191,7 +191,7 @@ const AGGREGATED_SEARCH_CONFIG = {
 const API_CONFIG = {
     search: {
         // 只拼接参数部分，不再包含 /api.php/provide/vod/
-        path: '?ac=list&wd=',
+        path: '?ac=videolist&wd=',
         pagePath: '?ac=list&wd={query}&pg={page}',
         maxPages: 50, // 最大获取页数
         headers: {
@@ -201,7 +201,7 @@ const API_CONFIG = {
     },
     detail: {
         // 只拼接参数部分
-        path: '?ac=detail&ids=',
+        path: '?ac=videolist&ids=',
         headers: {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
             'Accept': 'application/json'

@@ -13,9 +13,9 @@ const PASSWORD_CONFIG = {
 
 // 网站信息配置
 const SITE_CONFIG = {
-    name: 'LibreTV',
+    name: 'TV📺🎬',
     url: 'https://libretv.is-an.org',
-    description: '免费在线视频搜索与观看平台',
+    description: '一起看电视、电影',
     logo: 'image/logo.png',
     version: '1.0.3'
 };
@@ -39,10 +39,10 @@ const API_SITES = {
         api: 'https://tyyszy.com/api.php/provide/vod',
         name: '天涯资源',
     },
-    // xiaomaomi: {
-    //     api: 'https://zy.xiaomaomi.cc/api.php/provide/vod',
-    //     name: '小猫咪资源',
-    // },
+    xiaomaomi: {
+        api: 'https://zy.xiaomaomi.cc/api.php/provide/vod',
+        name: '小猫咪资源',
+    },
     ffzy: {
         api: 'http://ffzy5.tv/api.php/provide/vod',
         name: '非凡影视',
@@ -124,43 +124,43 @@ const API_SITES = {
     // 而作为观众无辜吗？毫无疑问，他们促成了黄色产业链的再生产。
     // 我们提供此警告，是希望您能认清这些内容的本质——它们是压迫和奴役的工具，而非娱乐。
     ckzy: {
-        api: 'https://www.ckzy1.com',
+        api: 'https://www.ckzy1.com/api.php/provide/vod',
         name: 'CK资源',
         adult: true
     },
     jkun: {
-        api: 'https://jkunzyapi.com',
+        api: 'https://jkunzyapi.com/api.php/provide/vod',
         name: 'jkun资源',
         adult: true
     },
     bwzy: {
-        api: 'https://api.bwzym3u8.com',
+        api: 'https://api.bwzym3u8.com/api.php/provide/vod',
         name: '百万资源',
         adult: true
     },
     souav: {
-        api: 'https://api.souavzy.vip',
+        api: 'https://api.souavzy.vip/api.php/provide/vod',
         name: 'souav资源',
         adult: true
     },
     r155: {
-        api: 'https://155api.com',
+        api: 'https://155api.com/api.php/provide/vod',
         name: '155资源',
         adult: true
     },
     lsb: {
-        api: 'https://apilsbzy1.com',
+        api: 'https://apilsbzy1.com/api.php/provide/vod',
         name: 'lsb资源',
         adult: true
     },
     huangcang: {
-        api: 'https://hsckzy.vip',
+        api: 'https://hsckzy.vip/api.php/provide/vod',
         name: '黄色仓库',
         adult: true,
         detail: 'https://hsckzy.vip'
     },
     yutu: {
-        api: 'https://yutuzy10.com',
+        api: 'https://apiyutu.com/api.php/provide/vod',
         name: '玉兔资源',
         adult: true
     },

@@ -38,9 +38,17 @@ const API_SITES = {
         api: 'https://tyyszy.com/api.php/provide/vod',
         name: '天涯资源',
     },
-    xiaomaomi: {
-        api: 'https://zy.xiaomaomi.cc/api.php/provide/vod',
-        name: '小猫咪资源',
+    qilin: {
+        api: 'https://www.qilinzyz.com/api.php/provide/vod',
+        name: '麒麟资源',
+    },
+    niuniu: {
+        api: 'https://api.niuniuzy.me/api.php/provide/vod',
+        name: '牛牛资源',
+    },
+     fengcao: {
+        api: 'https://api.fczy888.me/api.php/provide/vod',
+        name: '丰巢资源',
     },
     ffzy: {
         api: 'https://api.ffzyapi.com/api.php/provide/vod',
@@ -55,6 +63,10 @@ const API_SITES = {
     zy360: {
         api: 'https://360zy.com/api.php/provide/vod',
         name: '360资源',
+    },
+    qilin: {
+        api: 'https://www.qilinzyz.com/api.php/provide/vod',
+        name: '麒麟资源',
     },
     // iqiyi: {
     //     api: 'https://www.iqiyizyapi.com/api.php/provide/vod',
@@ -160,6 +172,38 @@ const API_SITES = {
     yutu: {
         api: 'https://apiyutu.com/api.php/provide/vod',
         name: '玉兔资源',
+        adult: true
+    },
+    lsb: {
+        api: 'https://apilsbzy1.com/api.php/provide/vod',
+        name: 'lsb资源',
+        adult: true
+    },
+    hsck: {
+        api: 'https://hsckzy.vip/api.php/provide/vod',
+        name: 'hsck资源',
+        adult: true
+    },
+    subocj: {
+        api: 'https://subocj.com/api.php/provide/vod',
+        name: 'subocj资源',
+        adult: true
+    },
+
+    thzy: {
+        api: 'https://thzy1.me/api.php/provide/vod',
+        name: 'thzy资源',
+        adult: true
+    },
+    fhapi: {
+        api: 'http://fhapi9.com/api.php/provide/vod',
+        name: 'fhapi资源',
+        adult: true
+    },
+
+    siwa资源: {
+        api: 'https://siwazyw.tv/api.php/provide/vod',
+        name: 'siwa资源',
         adult: true
     },
 

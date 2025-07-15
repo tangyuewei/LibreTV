@@ -47,8 +47,12 @@ const API_SITES = {
         name: '牛牛资源',
     },
      fengcao: {
-        api: 'https://api.fczy888.me/api.php/provide/vod',
+        api: 'https://suoniapi.com/api.php/provide/vod',
         name: '丰巢资源',
+    },
+    suoni: {
+        api: 'https://suoniapi.com/api.php/provide/vod',
+        name: ' 索尼资源',
     },
     ffzy: {
         api: 'https://api.ffzyapi.com/api.php/provide/vod',
@@ -100,6 +104,10 @@ const API_SITES = {
     zuid: {
         api: 'https://api.zuidapi.com/api.php/provide/vod',
         name: '最大资源'
+    },
+    hongniu: {
+        api: 'https://www.hongniuzy2.com/api.php/provide/vod',
+        name: '红牛资源'
     },
     yinghua: {
         api: 'https://m3u8.apiyhzy.com/api.php/provide/vod',
@@ -189,7 +197,11 @@ const API_SITES = {
         name: 'subocj资源',
         adult: true
     },
-
+    avre: {
+        api: 'https://www.avre06.com/api.php/provide/vod',
+        name: 'avre资源',
+        adult: true
+    },
     thzy: {
         api: 'https://thzy1.me/api.php/provide/vod',
         name: 'thzy资源',
@@ -201,7 +213,7 @@ const API_SITES = {
         adult: true
     },
 
-    siwa资源: {
+    siwa: {
         api: 'https://siwazyw.tv/api.php/provide/vod',
         name: 'siwa资源',
         adult: true
@@ -245,7 +257,7 @@ const API_CONFIG = {
     },
     detail: {
         // 只拼接参数部分
-        path: '?ac=videolist&ids=',
+        path: '?ac=detail&ids=',
         headers: {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
             'Accept': 'application/json'

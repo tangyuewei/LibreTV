@@ -1,5 +1,5 @@
 // 全局变量
-let selectedAPIs = JSON.parse(localStorage.getItem('selectedAPIs') || '["tyyszy","dyttzy", "bfzy", "ruyi"]'); // 默认选中资源
+let selectedAPIs = JSON.parse(localStorage.getItem('selectedAPIs') || '["tyyszy","dyttzy","bfzy","ruyi","qilin","niuniu","fengcao","suoni","ffzy","heimuer","zy360","maotai","dbzy","mdzy","jisu","wujin"]'); // 默认选中资源
 let customAPIs = JSON.parse(localStorage.getItem('customAPIs') || '[]'); // 存储自定义API列表
 
 // 添加当前播放的集数索引
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // 设置默认API选择（如果是第一次加载）
     if (!localStorage.getItem('hasInitializedDefaults')) {
         // 默认选中资源
-        selectedAPIs = ["tyyszy", "bfzy", "dyttzy", "ruyi"];
+        selectedAPIs = ["tyyszy","dyttzy","bfzy","ruyi","qilin","niuniu","fengcao","suoni","ffzy","heimuer","zy360","maotai","dbzy","mdzy","jisu","wujin"];
         localStorage.setItem('selectedAPIs', JSON.stringify(selectedAPIs));
 
         // 默认选中过滤开关
@@ -484,9 +484,21 @@ function toggleSettings(e) {
     const settingsPanel = document.getElementById('settingsPanel');
     if (!settingsPanel) return;
 
+    // 检查是否有管理员密码
+    const hasAdminPassword = window.__ENV__?.ADMINPASSWORD && 
+                           window.__ENV__.ADMINPASSWORD.length === 64 && 
+                           !/^0+$/.test(window.__ENV__.ADMINPASSWORD);
+
     if (settingsPanel.classList.contains('show')) {
         settingsPanel.classList.remove('show');
     } else {
+        // 只有设置了管理员密码且未验证时才拦截
+        if (hasAdminPassword && !isAdminVerified()) {
+            e.preventDefault();
+            e.stopPropagation();
+            showAdminPasswordModal();
+            return;
+        }
         settingsPanel.classList.add('show');
     }
 
@@ -605,22 +617,12 @@ function getCustomApiInfo(customApiIndex) {
 
 // 搜索功能 - 修改为支持多选API和多页结果
 async function search() {
-    // 强化的密码保护校验 - 防止绕过
-    try {
-        if (window.ensurePasswordProtection) {
-            window.ensurePasswordProtection();
-        } else {
-            // 兼容性检查
-            if (window.isPasswordProtected && window.isPasswordVerified) {
-                if (window.isPasswordProtected() && !window.isPasswordVerified()) {
-                    showPasswordModal && showPasswordModal();
-                    return;
-                }
-            }
+    // 密码保护校验
+    if (window.isPasswordProtected && window.isPasswordVerified) {
+        if (window.isPasswordProtected() && !window.isPasswordVerified()) {
+            showPasswordModal && showPasswordModal();
+            return;
         }
-    } catch (error) {
-        console.warn('Password protection check failed:', error.message);
-        return;
     }
     const query = document.getElementById('searchInput').value.trim();
 
